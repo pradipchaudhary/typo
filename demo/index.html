@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Short Video Size Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <label for="titleInput">Title Text:</label>
+            <input type="text" id="titleInput" placeholder="Enter title text">
+            <label for="titleFontSizeInput">Title Font Size (px):</label>
+            <input type="number" id="titleFontSizeInput" value="20">
+            
+            <label for="contentInput">Content Text:</label>
+            <textarea id="contentInput" placeholder="Enter content text"></textarea>
+
+            <!-- <input type="text" id="contentInput" placeholder="Enter content text"> -->
+            <label for="contentFontSizeInput">Content Font Size (px):</label>
+            <input type="number" id="contentFontSizeInput" value="17">
+            
+            <label for="speedInput">Animation Speed (ms):</label>
+            <input type="number" id="speedInput" value="150">
+            <button id="startAnimation">Start Animation</button>
+        </div>
+        <div class="canvas">
+            <div id="canvasContainer">
+                <canvas id="myCanvas"></canvas>
+                <div id="titleDiv" class="resizableDiv"></div>
+                <div id="contentDiv" class="resizableDiv"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
