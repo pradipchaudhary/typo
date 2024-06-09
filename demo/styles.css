@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    /* justify-content: space-between; */
+}
+.controls {
+    width: 360px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+}
+.controls label {
+    display: block;
+    margin-top: 10px;
+}
+.controls input, .controls textarea, .controls button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+.controls button {
+    margin-top: 20px;
+}
+.controls textarea {
+    height: 100px; /* Adjust the height as needed */
+    resize: vertical;
+}
+.canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#canvasContainer {
+    position: relative;
+    width: 360px; /* Width for YouTube short video size */
+    height: 640px; /* Height for YouTube short video size */
+    border: 1px solid #eaeaf9;
+    padding: 20px; /* Padding for the canvas container */
+    overflow: hidden;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-size: 36px 36px;
+    background-image:  repeating-linear-gradient(0deg, #444cf7, #444cf7 1px, #e5e5f7 1px, #e5e5f7);
+}
+#canvasContainer canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set canvas width to fill its container */
+    height: 100%; /* Set canvas height to fill its container */
+}
+.resizableDiv {
+    width: calc(100% - 0px); /* 100% minus padding */
+    /* background-color: lightblue; */
+    resize: both;
+    overflow: auto;
+    /* border: 1px solid black; */
+    padding: 10px; /* Padding for the resizable div */
+    box-sizing: border-box; /* Include padding and border in width and height calculation */
+    opacity: 0; /* Start with invisible */
+    animation: fadeIn 1s forwards; /* Animation for fade-in */
+    transition: width 0.3s, height 0.3s; /* Smooth transitions for resizing */
+    margin-top: 10px; /* Space between title and content */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+#titleDiv{
+    line-height: 2.2rem;
+    color: blue;
+}
+#contentDiv{
+    line-height: 2.2rem;
+    margin-top: 20px;
+}
