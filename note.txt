@@ -1,0 +1,1 @@
+how to capture web certain part screenrecord and save it using javascript language
